@@ -4,18 +4,18 @@ import pandas as pd
 from gpx_handler import GPXHandler
 from utils import df_to_gpx
 
-#########final version#########
+######### completed #########
 
 def read_gpx_files(folder_path):
     trajectories = {}
     for filename in os.listdir(folder_path):
         if filename.endswith('.gpx'):
-            # look for 'GS' or 'GH' in the filename
+            # Look for the location of 'GS' or 'GH'
             gs_gh_index = filename.find('GS') if 'GS' in filename else filename.find('GH')
             if gs_gh_index != -1:
-                # extract the id for the trajectory/entire trip
+                # Get trajectory ID
                 identifier = filename[gs_gh_index:gs_gh_index+2]  # 'GS' or 'GH'
-                trajectory_id = filename[-7:-4]  # with final 3 digits
+                trajectory_id = filename[-7:-4]  # the last 3 digits
                 full_id = identifier + trajectory_id
                 if full_id not in trajectories:
                     trajectories[full_id] = []
@@ -40,7 +40,7 @@ def save_gpx_file(merged_gpx, output_path, participant_id, full_id):
 
 def process_folder(top_folder, output_path):
     for root, dirs, files in os.walk(top_folder):
-        participant_id = os.path.basename(root)  # get the participant id
+        participant_id = os.path.basename(root)  # Get the participant ID
         trajectories = read_gpx_files(root)
         for full_id, files in trajectories.items():
             files.sort(key=lambda x: int(x[x.find('GS') + 2:x.find('GS') + 4]) if 'GS' in x else int(x[x.find('GH') + 2:x.find('GH') + 4]))
@@ -50,6 +50,6 @@ def process_folder(top_folder, output_path):
 
 
 
-folder_path = '/xxxxxx/data/gpx_filtered/'  # gpx_folder
-output_path = '/xxxxxx/data/gpx_merged/'     # output_folder
+folder_path = '/Users/ceciliawang/Documents/PhD/pyprojects/metadata/data/gpx_filtered/'
+output_path = '/Users/ceciliawang/Documents/PhD/pyprojects/metadata/data/gpx_merged'
 process_folder(folder_path, output_path)
