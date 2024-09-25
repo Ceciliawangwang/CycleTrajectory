@@ -5,16 +5,15 @@ Global positioning system (GPS) trajectories recorded by mobile phones or action
 
 <img width="947" alt="preprocessing" src="https://github.com/user-attachments/assets/67d3834b-1298-4973-8d79-a50d4f7a37f1">
 
-
 ## Software and tools
-Python 3.10
-Libraries: gpmf-parser, gpxpy, ....
-Web Service: OSRM, Overpass
-
-## Main Functions
+- **Python** for data preprocessing and analysis.
+- **PostgreSQL with PostGIS** for data management and storage.
+- **QGIS** for data visualization.
+- **OSRM and Overpass API** for map matching and data integration.
 
 
 ## Cite
+If you find CycleTrajectory useful for your research, please cite us!
 ```
 @misc{ilyankou2024ccgpxextractinghighqualityannotated,
       title={CC-GPX: Extracting High-Quality Annotated Geospatial Data from Common Crawl}, 
