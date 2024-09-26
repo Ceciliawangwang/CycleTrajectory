@@ -13,6 +13,19 @@ Global positioning system (GPS) trajectories recorded by mobile phones or action
 - **OSRM and Overpass API** for map matching and data integration.
 
 
+## Data
+CycleTrajectory is designed for processing GPS trajectory data, specifically focusing on data from GoPro devices.
+
+## Functions
+- ```1_merge_gpx.py``` and ```1_timestamp.ipynb```: Used for the initial preprocessing of GPS trajectories. These scripts and notebooks correct timestamps and merge multiple GPX files into a complete trip.
+
+- ```.ipynb```: Snaps raw GPS data to road segments using the OSRM API, improving positional accuracy and preparing data for semantic enrichment.
+
+- ```.ipynb```: Enhances GPS data by integrating infrastructure data from OpenStreetMap.
+
+- ```4_variables_calculation.ipynb```: Computes cycling-related variables such as average speed, average moving speed, time spent under various speed limits, and time spent on different types of cycling infrastructure.
+
+
 ## Cite
 If you find CycleTrajectory useful for your research, please cite us!
 
