@@ -15,13 +15,13 @@ Global positioning system (GPS) trajectories recorded by mobile phones or action
 ## Cite
 If you find CycleTrajectory useful for your research, please cite us!
 ```
-@misc{ilyankou2024ccgpxextractinghighqualityannotated,
-      title={CC-GPX: Extracting High-Quality Annotated Geospatial Data from Common Crawl}, 
-      author={Ilya Ilyankou and Meihui Wang and Stefano Cavazzi and James Haworth},
+@misc{wang2024cycletrajectoryendtoendpipelineenriching,
+      title={CycleTrajectory: An End-to-End Pipeline for Enriching and Analyzing GPS Trajectories to Understand Cycling Behavior and Environment}, 
+      author={Meihui Wang and James Haworth and Ilya Ilyankou and Nicola Christie},
       year={2024},
-      eprint={2405.11039},
+      eprint={2406.10069},
       archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2405.11039}, 
+      primaryClass={cs.DB},
+      url={https://arxiv.org/abs/2406.10069}, 
 }
 ```
